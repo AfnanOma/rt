@@ -1,0 +1,50 @@
+<html>
+<head>
+<script
+ type="text/javascript" charset="utf-8" src="cordova.js">
+</script> 
+<script 
+type="text/javascript" charset="utf-8"> 
+function add() {
+    localstorage.setItem("Name" ,"Riyad");
+    localStorage [ "Name"] = "Riyad"; 
+      document.getElementById("val").innerHTML = localstorage ["Name"]; 
+      sessionStorage.setItem("Password", "Ri123");
+       sessionStorage ["Password"] = "Ri123"; 
+       document.getElementById("val").innerHTML += "<br/>" + sessionstorage ["Password"];
+}
+
+        function update() {
+            localStorage.setitem ("Name", "Mazen") ;
+            localstorage ["Name"] ="Mazen"; 
+            document.getElementById("val") .innerHTML = localStorage ["Name"]; 
+            sessionStorage.setItem ("Password", "Ma123");
+             sessionStorage ["Password"]="Ma123";
+              document.getElementById("val").innerHTML += "<br/>" + sessionStorage ["Password"]
+        }
+         function read(){
+          document.getElementById("val").innerHTML = localStorage.getItem ("Name");
+           document.getElementById("val").innerHTML += "<br/>" + localstorage["Name"];
+           document.getElementById("val").innerHTML + "<br/>" + sessionStorage.getItem ("Password");
+           document.getElementById("val").innerHTML += "<br/>" + sessionStorage ["Password"];
+         }
+            function removeAll(){ 
+            localstorage.clear (); 
+            sessionstorage.clear();
+            }
+             function removeValue(key) {
+            localstorage.removeItem (key);
+            sessionStorage.removeItem(key);
+            document.getElementById("val").innerHTML=localstorage [key];
+             }
+             </script>
+             </head>
+            </body>
+            <h1>Storage</h1> 
+            <p id="val"></p>
+              <input type="button" value="add" onclick="add ();"/> 
+              <input type="button" value="update" oncck="update ();"/> 
+              <input type="button" value="read" onclick="read();"/>
+            <input type="button" value="removeAll" onclick="removeA11();"/> 
+             <input type="button" value="removeAll" onclick="removeValue ('Name');"/>
+            </html>
